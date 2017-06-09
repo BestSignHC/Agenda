@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NoteActivity">
+
+    <item
+        android:id="@+id/action_search_note"
+        android:orderInCategory="100"
+        android:title="搜索"
+        android:icon="@mipmap/search"
+        app:showAsAction="always" />
+</menu>

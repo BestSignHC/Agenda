@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@mipmap/schedule"
+            android:title="日程" />
+        <item
+            android:id="@+id/nav_plan"
+            android:icon="@mipmap/week"
+            android:title="计划" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@mipmap/note"
+            android:title="笔记" />
+    </group>
+
+    <item android:title="系统">
+        <menu>
+            <item
+            android:id="@+id/nav_refresh"
+            android:icon="@mipmap/refresh"
+            android:title="同步" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/logout"
+                android:title="退出" />
+        </menu>
+    </item>
+
+</menu>

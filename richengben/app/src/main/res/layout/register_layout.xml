@@ -1,0 +1,110 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@drawable/background_login">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:stretchColumns="1,2,3"
+        >
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_label_username"/>
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:maxLength="13"
+                android:hint="@string/login_username_hint"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:layout_span="2"
+                android:maxLines="1"
+                android:hint="@string/reg_phone_code"/>
+            <Button
+                android:id="@+id/btn_code"
+                android:text="发送"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_label_pwd"/>
+            <EditText
+                android:id="@+id/et_pwd"
+                android:password="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:hint="@string/login_pwd_hint"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_label_re_pwd"/>
+            <EditText
+                android:password="true"
+                android:id="@+id/et_re_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:hint="@string/login_re_pwd_hint"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:layout_span="3"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_account"/>
+            <TextView
+                android:id="@+id/tv_login"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

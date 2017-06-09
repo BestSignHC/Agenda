@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Transparent"
+    android:background="@color/schedule_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:layout_marginStart="20px"
+            android:id="@+id/scheduleAddClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/del"/>
+
+        <ImageButton
+            android:id="@+id/schedule_add_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:src="@mipmap/done"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="64px"
+        android:text="分类："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/schedule_add_color_1"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:background="@color/red"/>
+        <Button
+            android:visibility="invisible"
+            android:layout_width="64px"
+            android:layout_height="48px"/>
+        <Button
+            android:id="@+id/schedule_add_color_2"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:background="@color/green"/>
+        <Button
+            android:visibility="invisible"
+            android:layout_width="64px"
+            android:layout_height="48px"/>
+        <Button
+            android:id="@+id/schedule_add_color_3"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:background="@color/blue"/>
+        <Button
+            android:visibility="invisible"
+            android:layout_width="64px"
+            android:layout_height="48px"/>
+        <Button
+            android:id="@+id/schedule_add_color_4"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="内容："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/schedule_detail"
+            android:textSize="30sp"
+            android:inputType="textMultiLine"
+            android:hint="日程内容"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="时间："
+            android:layout_marginTop="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:textSize="30sp"
+                android:id="@+id/schedule_startTime"
+                android:text="开始时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="——"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="30sp"
+                android:id="@+id/schedule_endTime"
+                android:text="结束时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="20px"
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/schedule_remark"
+            android:layout_width="match_parent"
+            android:textSize="30sp"
+            android:inputType="textMultiLine"
+            android:gravity="left|top"
+            android:autoText="true"
+            android:hint="为日程创建备注"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_marginRight="50px">
+
+            <TextView
+                android:text="设立提醒:"
+                android:textSize="30sp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/is_notice"
+                android:layout_width="64px"
+                android:layout_height="64px" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/doneTimeLabel"
+            android:layout_marginTop="20px"
+            android:text="完成时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/doneTime"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:textSize="30sp"
+            android:gravity="left|top"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

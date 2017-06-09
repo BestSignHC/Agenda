@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:layout_marginTop="2dp">
+
+    <Button
+        android:id="@+id/schedule_color"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        />
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@+id/schedule_id"
+            android:text=""
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/schedule_status"
+            android:text=""
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/schedule_detail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="schedule"
+            android:textSize="20sp"
+            android:gravity="top"/>
+
+        <TextView
+            android:id="@+id/schedule_time"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="schedule"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:alpha="0.7"
+        android:layout_weight="1"
+        android:id="@+id/schedule_img_done"
+        android:layout_gravity="center"
+        android:scaleType="fitEnd"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

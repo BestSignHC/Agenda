@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sendtion.xrichtextdemo.ui.NoteActivity">
+
+    <!--<item-->
+        <!--android:id="@+id/action_note_share"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="分享"-->
+        <!--android:icon="@mipmap/share"-->
+        <!--app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_note_edit"
+        android:orderInCategory="100"
+        android:title="编辑"
+        android:icon="@mipmap/edit"
+        app:showAsAction="always" />
+</menu>

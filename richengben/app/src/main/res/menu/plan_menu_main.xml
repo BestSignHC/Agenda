@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PlanActivity2">
+
+    <item
+        android:checkable="false"
+        android:id="@+id/switch_plan_text"
+        android:orderInCategory="100"
+        android:title="周计划"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/switch_plan"
+        android:orderInCategory="100"
+        android:title="周计划"
+        android:icon="@mipmap/plan_week"
+        app:showAsAction="always" />
+</menu>
