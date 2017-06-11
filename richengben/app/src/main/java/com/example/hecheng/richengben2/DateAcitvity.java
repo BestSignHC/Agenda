@@ -49,9 +49,10 @@ import butterknife.ButterKnife;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 
-import static cn.bmob.v3.update.UpdateStatus.No;
-
-public class DateAcitvity2 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnDateSelectedListener, OnMonthChangedListener {
+/**
+ * 程序住界面，显示一个日历
+ */
+public class DateAcitvity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnDateSelectedListener, OnMonthChangedListener {
 
     private static final DateFormat FORMATTER = SimpleDateFormat.getDateInstance();
 
@@ -107,7 +108,7 @@ public class DateAcitvity2 extends AppCompatActivity implements NavigationView.O
 
     private void searchSchedule(View view) {
         //显示搜索对话框
-        final SearchDialog dialog = new SearchDialog(DateAcitvity2.this, R.style.SearchDialog, user);
+        final SearchDialog dialog = new SearchDialog(DateAcitvity.this, R.style.SearchDialog, user);
         dialog.setSearchBtnClickListener(new SearchDialog.OnSearchBtnClickListener() {
             @Override
             public void onSearchBtClick() {
@@ -124,7 +125,7 @@ public class DateAcitvity2 extends AppCompatActivity implements NavigationView.O
                 }
                 dialog.dismiss();
 
-                final ProgressDialog processDialog = ProgressDialogUtil.showProcessDialog("搜索中。。。", DateAcitvity2.this);
+                final ProgressDialog processDialog = ProgressDialogUtil.showProcessDialog("搜索中。。。", DateAcitvity.this);
                 processDialog.show();
 
                 List<Integer> status = new ArrayList<Integer>();
@@ -230,7 +231,7 @@ public class DateAcitvity2 extends AppCompatActivity implements NavigationView.O
             i.putExtras(bundle);
             startActivity(i);
         } else if (id == R.id.nav_plan) {  //计划管理
-            Intent intent = new Intent(getApplicationContext(), PlanActivity2.class);
+            Intent intent = new Intent(getApplicationContext(), PlanActivity.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("user", user);
             intent.putExtras(bundle);
@@ -242,7 +243,7 @@ public class DateAcitvity2 extends AppCompatActivity implements NavigationView.O
             intent.putExtras(bundle);
             startActivity(intent);
         }else if (id == R.id.nav_refresh) { //同步操作
-            final ProgressDialog progressDialog = ProgressDialogUtil.showProcessDialog("同步中，请稍后。。。", DateAcitvity2.this);
+            final ProgressDialog progressDialog = ProgressDialogUtil.showProcessDialog("同步中，请稍后。。。", DateAcitvity.this);
             progressDialog.show();
             DBHelper dbHelper = new DBHelper(getApplicationContext());
             ScheduleSDao sdo = new ScheduleSDao(dbHelper);

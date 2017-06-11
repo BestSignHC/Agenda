@@ -42,6 +42,9 @@ import static com.example.hecheng.richengben2.common.Constants.COLOR_BLUE;
 import static com.example.hecheng.richengben2.common.Constants.COLOR_GREEN;
 import static com.example.hecheng.richengben2.common.Constants.COLOR_RED;
 
+/**
+ * 新增日程和显示日程详情
+ */
 public class AddScheduleActivity extends AppCompatActivity {
 
     @BindView(R.id.scheduleAddClose)
@@ -303,6 +306,10 @@ public class AddScheduleActivity extends AppCompatActivity {
         etScheduleDetail.setTextColor(Color.BLACK);
     }
 
+    /**
+     * 显示日程详情
+     * @param schedule
+     */
     private void showScheduleData(Schedule schedule) {
         if (schedule.getStatus() != Constants.SCHEDULE_STATUS.WAIT.getValue()) { //查看详情 设置所有控件不可点击
             btnAddType1.setEnabled(false);
@@ -366,6 +373,13 @@ public class AddScheduleActivity extends AppCompatActivity {
         cbIsNotice.setChecked(isNotice);
     }
 
+    /**
+     * r日程提醒
+     * @param startDate
+     * @param title
+     * @param detail
+     * @param scheduleId
+     */
     public void setNotifacationAlarm(final Date startDate, final String title, final String detail, final String scheduleId) {
         AlarmManager manger = (AlarmManager) getApplication().getSystemService(Service.ALARM_SERVICE);
         Intent intent = new Intent("com.example.hecheng.richengben2.service.noticeService");

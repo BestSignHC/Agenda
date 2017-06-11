@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hecheng.richengben2.DaoImpl.PlanDao;
-import com.example.hecheng.richengben2.PlanActivity2;
+import com.example.hecheng.richengben2.PlanActivity;
 import com.example.hecheng.richengben2.R;
 import com.example.hecheng.richengben2.common.DateUtil;
 import com.example.hecheng.richengben2.View.TreeView;
@@ -33,7 +33,7 @@ public class PlanAdapter extends BaseExpandableListAdapter implements TreeView.I
     private Context context;
     private LayoutInflater mInflater;
     private TreeView treeView;
-    private PlanActivity2.childClickListener listener;
+    private PlanActivity.childClickListener listener;
 
     private Map<Plan, List<Plan>> dataMap = new HashMap<>();
     private Object[] parentList;
@@ -41,7 +41,7 @@ public class PlanAdapter extends BaseExpandableListAdapter implements TreeView.I
     private Map<Integer, Integer> STEP_IMG = new HashMap<>();
     private HashMap<Integer, Integer> groupStatusMap = new HashMap<>();
 
-    public PlanAdapter(LayoutInflater mInflater, TreeView treeView, Map<Plan, List<Plan>> dataMap, Context context, PlanActivity2.childClickListener listener) {
+    public PlanAdapter(LayoutInflater mInflater, TreeView treeView, Map<Plan, List<Plan>> dataMap, Context context, PlanActivity.childClickListener listener) {
         this.mInflater = mInflater;
         this.treeView = treeView;
         this.dataMap = dataMap;

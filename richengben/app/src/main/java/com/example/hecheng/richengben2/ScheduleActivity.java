@@ -50,7 +50,8 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 
 /**
- * Created by Administrator on 2017/4/4.
+ * 日程管理Activity
+ * Created by HeCheng on 2017/4/4.
  */
 
 public class ScheduleActivity extends AppCompatActivity {
@@ -68,15 +69,17 @@ public class ScheduleActivity extends AppCompatActivity {
     @BindView(R.id.btn_add_schedule)
     public FloatingActionButton btnAddSchedule;
     @BindView(R.id.grid_swipe_refresh)
-    public SwipeRefreshLayout swipRefresh;
+    public SwipeRefreshLayout swipeRefresh;
 
     private ScheduleAdapter scheduleAdapter;
     private Date nowDate;
     private User user;
+
     private List<Schedule> scheduleLists = new ArrayList<Schedule>();
     private List<Schedule> scheduleWaitList = new ArrayList<>();
-    private int windowWith;
-    Map<String, Schedule> scheduleMap = new HashMap<String, Schedule>();
+    private Map<String, Schedule> scheduleMap = new HashMap<String, Schedule>();
+
+    private int windowWidth;
     boolean isSearch = false;
     boolean isOnlyWait = true;
     private String updateScheduleId = "";
@@ -90,7 +93,7 @@ public class ScheduleActivity extends AppCompatActivity {
         Bmob.initialize(this, Constants.APP_ID);
 
         WindowManager wm = this.getWindowManager();
-        windowWith = wm.getDefaultDisplay().getWidth();
+        windowWidth = wm.getDefaultDisplay().getWidth();
 
         Intent intent = this.getIntent();
         isSearch = (Boolean) intent.getSerializableExtra("isSearch");
@@ -120,6 +123,7 @@ public class ScheduleActivity extends AppCompatActivity {
         }
     }
 
+    //根据显示模式切换数据
     private void initMap() {
         if (isOnlyWait) {
             for (Schedule s : scheduleWaitList) {
@@ -141,10 +145,10 @@ public class ScheduleActivity extends AppCompatActivity {
         //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
         recyclerView.setHasFixedSize(true);
 
-        swipRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                swipRefresh.setRefreshing(false);
+                swipeRefresh.setRefreshing(false);
             }
         });
 
@@ -329,6 +333,7 @@ public class ScheduleActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //实现日程项的滑动操作
     private ItemTouchHelper getItemTouchHelper() {
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback() {
 
@@ -596,7 +601,7 @@ public class ScheduleActivity extends AppCompatActivity {
             public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
                 //根据item滑动偏移的值修改item透明度。screenwidth是我提前获得的屏幕宽度
-                viewHolder.itemView.setAlpha(1 - Math.abs(dX) / windowWith);
+                viewHolder.itemView.setAlpha(1 - Math.abs(dX) / windowWidth);
             }
 
         });

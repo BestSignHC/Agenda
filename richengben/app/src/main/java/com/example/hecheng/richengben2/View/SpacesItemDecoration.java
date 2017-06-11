@@ -4,10 +4,6 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-/**
- * Created by Sendtion on 2016/7/4.
- * RecyclerView Item的间距
- */
 public class SpacesItemDecoration extends RecyclerView.ItemDecoration {
     private int space;
 

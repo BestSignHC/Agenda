@@ -22,6 +22,7 @@ import com.example.hecheng.richengben2.domin.User;
 import java.util.Calendar;
 
 /**
+ * 日程搜索对话框
  * Created by HeCheng on 2017/4/14.
  */
 
@@ -55,11 +56,6 @@ public class SearchDialog extends Dialog {
     }
 
     Context context;
-
-    public SearchDialog(Context context) {
-        super(context);
-        this.context = context;
-    }
 
     public SearchDialog(Context context, int theme, User user) {
         super(context, theme);
@@ -256,6 +252,9 @@ public class SearchDialog extends Dialog {
         return statusDel;
     }
 
+    /**
+     * 修改样式为笔记搜索
+     */
     public void changeToNoteView(){
 
         initView();

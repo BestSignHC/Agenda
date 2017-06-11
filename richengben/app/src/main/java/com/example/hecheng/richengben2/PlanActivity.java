@@ -40,10 +40,11 @@ import butterknife.OnClick;
 import cn.bmob.v3.Bmob;
 
 /**
+ * 计划管理
  * Created by HeCheng on 2017/3/22.
  */
 
-public class PlanActivity2 extends BaseActivity {
+public class PlanActivity extends BaseActivity {
 
     private User user = null;
     private String userId;
@@ -238,6 +239,7 @@ public class PlanActivity2 extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //结束时间
     private String getEndDate(boolean isWeekPlan) {
         Calendar now = Calendar.getInstance();
         if (isWeekPlan) {
@@ -249,8 +251,9 @@ public class PlanActivity2 extends BaseActivity {
         return DateUtil.getDateDayString(endDate);
     }
 
+    //新增
     private void doAddPlan(final Plan parentPlan,final Plan newPlan) {
-        final PlanDao dao = new PlanDao(PlanActivity2.this);
+        final PlanDao dao = new PlanDao(PlanActivity.this);
         if (newPlan != null) {
             dao.insertPlan(newPlan, new BaseListener<Plan>() {
                 @Override
@@ -290,7 +293,7 @@ public class PlanActivity2 extends BaseActivity {
         for (Object plan : plans) {
             parentList.add((Plan) plan);
         }
-        adapter = new PlanAdapter(mInflater, treeView, dataMap, PlanActivity2.this, new childClickListener() {
+        adapter = new PlanAdapter(mInflater, treeView, dataMap, PlanActivity.this, new childClickListener() {
             @Override
             public void OnChildClick(int groupPosition, int childPosition) {
                 Plan clickPlan = dataMap.get(parentList.get(groupPosition)).get(childPosition);
@@ -298,7 +301,7 @@ public class PlanActivity2 extends BaseActivity {
                     Plan parentPlan = parentList.get(groupPosition);
                     addChildPlan(parentPlan);
                 } else {
-                    Toast.makeText(PlanActivity2.this, dataMap.get(parentList.get(groupPosition)).get(childPosition).getDetail(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PlanActivity.this, dataMap.get(parentList.get(groupPosition)).get(childPosition).getDetail(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -36,6 +36,9 @@ import cn.bmob.v3.BmobUser;
 import static com.example.hecheng.richengben2.R.id.et_account;
 import static com.example.hecheng.richengben2.R.id.et_pwd;
 
+/**
+ * 登陆Activity
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private final String TAG  = "LoginActivity";
@@ -224,7 +227,7 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(LoginActivity.this, "欢迎，"+ user.getUsername(), Toast.LENGTH_SHORT).show();
         Log.d(TAG, user.toString());
 
-        Intent intent = new Intent(LoginActivity.this, DateAcitvity2.class);
+        Intent intent = new Intent(LoginActivity.this, DateAcitvity.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("user", user);
         intent.putExtras(bundle);

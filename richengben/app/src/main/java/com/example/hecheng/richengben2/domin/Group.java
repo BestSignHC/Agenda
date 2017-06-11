@@ -1,12 +1,5 @@
 package com.example.hecheng.richengben2.domin;
 
-/**
- * 作者：Sendtion on 2016/10/24 0024 15:05
- * 邮箱：sendtion@163.com
- * 博客：http://sendtion.cn
- * 描述：笔记分类
- */
-
 public class Group {
 
     private int id;//ID

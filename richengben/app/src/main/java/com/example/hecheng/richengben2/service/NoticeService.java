@@ -14,6 +14,7 @@ import com.example.hecheng.richengben2.LoginActivity;
 import com.example.hecheng.richengben2.R;
 
 /**
+ * 日程通知
  * Created by HeCheng on 2017/4/17.
  */
 

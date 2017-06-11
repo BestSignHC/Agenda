@@ -32,6 +32,7 @@ import cn.bmob.v3.Bmob;
 import static com.example.hecheng.richengben2.R.id.rv_list_main;
 
 /**
+ * 显示帮助页面
  * Created by HeCheng on 2017/3/22.
  */
 

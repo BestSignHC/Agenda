@@ -31,6 +31,7 @@ import cn.bmob.v3.listener.UpdateListener;
 import static cn.bmob.v3.BmobUser.getCurrentUser;
 
 /**
+ * 重置密码
  * Created by HeCheng on 2017/4/14.
  */
 

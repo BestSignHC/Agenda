@@ -41,6 +41,7 @@ import static com.example.hecheng.richengben2.R.id.et_pwd;
 import static com.example.hecheng.richengben2.common.ProgressDialogUtil.showProcessDialog;
 
 /**
+ * 注册Activity
  * Created by HeCheng on 2017/3/22.
  */
 
@@ -247,7 +248,7 @@ public class RegActivity extends AppCompatActivity {
             etAccount.setError("请输入11位大陆手机号！");
             return;
         }
-        BmobSMS.requestSMSCode(account, "您请求的验证码是：", new QueryListener<Integer>() {
+        BmobSMS.requestSMSCode(account, "模板1", new QueryListener<Integer>() {
 
             @Override
             public void done(Integer integer, BmobException e) {

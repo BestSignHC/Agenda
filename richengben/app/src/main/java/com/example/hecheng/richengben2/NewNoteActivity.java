@@ -233,9 +233,6 @@ public class NewNoteActivity extends BaseActivity {
         }
     }
 
-    /**
-     * 负责处理编辑数据提交等事宜，请自行实现
-     */
     private String getEditData() {
         List<RichTextEditor.EditData> editList = et_new_content.buildEditData();
         StringBuffer content = new StringBuffer();
@@ -352,10 +349,6 @@ public class NewNoteActivity extends BaseActivity {
      * 调用图库选择
      */
     private void callGallery(){
-//        //调用系统图库
-//        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//        intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");// 相片类型
-//        startActivityForResult(intent, 1);
 
         //调用第三方图库选择
         PhotoPicker.builder()

@@ -33,7 +33,7 @@
         </activity>
         <activity android:name=".RegActivity" />
         <activity android:name=".AddScheduleActivity" />
-        <activity android:name=".PlanActivity2"/>
+        <activity android:name=".PlanActivity"/>
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoteActivity"/>
         <activity android:name=".NewNoteActivity"/>
@@ -43,7 +43,7 @@
             android:name="me.iwf.photopicker.PhotoPickerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DateAcitvity2"
+            android:name=".DateAcitvity"
             android:label="@string/title_activity_date_acitvity2"
             android:theme="@style/AppTheme.NoActionBar"/>
 
